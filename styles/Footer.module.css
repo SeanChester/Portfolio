@@ -1,0 +1,20 @@
+.footer_links_ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.footer_links_ul > li {
+  margin-right: 10px;
+}
+
+.footer_container {
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  left: 50%;
+}
+
+.footer_copyright {
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
