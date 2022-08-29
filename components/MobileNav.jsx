@@ -5,13 +5,12 @@ import { GiHamburgerMenu } from 'react-icons/gi'
 import styles from '../styles/Navbar.module.css'
 
 
-const MobileNav = () => {
+const MobileNav = ({darkMode, handleBrightness}) => {
     const [hamburgerOpen, setHamburgerOpen] = useState(false)
-    const [darkMode, setDarkMode] = useState(false)
   return (
     <nav className={styles.mobileNav_container}>
         <ul className={styles.mobileNavIcons}>
-        <li>{darkMode ? <BsFillBrightnessHighFill className={styles.brightness_icon}/> : <BsFillMoonFill className={styles.brightness_icon}/> }</li>
+        <li>{darkMode ? <BsFillBrightnessHighFill className={styles.brightness_icon} onClick={handleBrightness}/> : <BsFillMoonFill className={styles.brightness_icon} onClick={handleBrightness}/> }</li>
         <li><GiHamburgerMenu className={styles.hamburger} onClick={() => setHamburgerOpen(!hamburgerOpen)}/></li>
         </ul>
         {hamburgerOpen && (
