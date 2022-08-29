@@ -4,8 +4,8 @@ import styles from '../styles/Navbar.module.css'
 import {BsFillBrightnessHighFill, BsFillMoonFill} from 'react-icons/bs'
 
 
-const Navigation = () => {
-    const [darkMode, setDarkMode] = useState(false)
+const Navigation = ({darkMode, handleBrightness}) => {
+
   return (
     <nav className={styles.container}>
     <div className={styles.space_maker}></div>
@@ -14,7 +14,7 @@ const Navigation = () => {
           <li><Link href="/Projects"><a>Projects</a></Link></li>
           <li><Link href="/About"><a>About</a></Link></li>
           <li><Link href="/Contact"><a>Contact</a></Link></li>
-          <li>{darkMode ? <BsFillBrightnessHighFill className={styles.brightness_icon}/> : <BsFillMoonFill className={styles.brightness_icon}/> }</li> 
+          <li>{darkMode ? <BsFillBrightnessHighFill className={styles.brightness_icon} onClick={handleBrightness} /> : <BsFillMoonFill className={styles.brightness_icon} onClick={handleBrightness}/> }</li> 
       </ul>
   </nav>
   )
